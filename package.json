@@ -1,0 +1,41 @@
+{
+  "name": "english-dictionary-pro",
+  "version": "2.0.0",
+  "description": "AI-powered English dictionary plugin for Obsidian with smart Anki export, chatbot tutor, and Cambridge audio",
+  "main": "main.js",
+  "scripts": {
+    "dev": "echo 'Development mode: Edit files and reload Obsidian'",
+    "deploy": "vercel --prod",
+    "test-backend": "curl http://localhost:3000/api/health",
+    "test-audio": "curl 'http://localhost:3000/api/cambridge-audio?word=hello'"
+  },
+  "keywords": [
+    "obsidian",
+    "plugin",
+    "dictionary",
+    "english",
+    "anki",
+    "ai",
+    "groq",
+    "cambridge",
+    "vocabulary",
+    "learning"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/english-dictionary-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/english-dictionary-pro/issues"
+  },
+  "homepage": "https://github.com/your-username/english-dictionary-pro#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}

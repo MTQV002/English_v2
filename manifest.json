@@ -1,0 +1,11 @@
+{
+	"id": "llm-dictionary-anki-v2",
+	"name": "English Dictionary Pro v2",
+	"version": "2.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "AI-powered English dictionary with smart Anki integration, lemmatization, AI tutor, and intelligent deck suggestions",
+	"author": "MTQV",
+	"authorUrl": "https://github.com/MTQV002/English-Dictionary-Pro",
+	"isDesktopOnly": false,
+	"main": "main.js"
+}
