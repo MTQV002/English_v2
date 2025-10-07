@@ -423,9 +423,8 @@ def index():
 
 # ==================== VERCEL HANDLER ====================
 
-# Vercel serverless handler
-def handler(environ, start_response):
-    return app(environ, start_response)
+# Vercel automatically detects Flask app
+# No explicit handler needed - just export 'app'
 
 # ==================== LOCAL DEVELOPMENT ====================
 
