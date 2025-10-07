@@ -53,6 +53,12 @@ class EnglishDictionarySettingTab extends PluginSettingTab {
                 .onChange(async (value) => {
                     this.plugin.settings.groqApiKey = value;
                     await this.plugin.saveSettings();
+                    
+                    // 🔥 RELOAD SERVICES - Update AIService with new API key
+                    if (this.plugin.dictionaryView) {
+                        this.plugin.dictionaryView.reloadServices();
+                        new Notice('✅ API Key updated! Services reloaded.');
+                    }
                 }));
 
         // Groq Model
@@ -65,18 +71,30 @@ class EnglishDictionarySettingTab extends PluginSettingTab {
                 .onChange(async (value) => {
                     this.plugin.settings.groqModel = value;
                     await this.plugin.saveSettings();
+                    
+                    // 🔥 RELOAD SERVICES - Update AIService with new model
+                    if (this.plugin.dictionaryView) {
+                        this.plugin.dictionaryView.reloadServices();
+                        new Notice('✅ Model updated! Services reloaded.');
+                    }
                 }));
 
         // Vercel Backend URL
         new Setting(containerEl)
             .setName('Backend URL')
-            .setDesc('🔧 LOCAL: http://localhost:6789 | 🚀 PRODUCTION: https://your-app.vercel.app')
+            .setDesc('🔧 LOCAL: http://localhost:6789 | 🚀 PRODUCTION: https://your-app.vercel.app (Example: https://english-v2.vercel.app)')
             .addText(text => text
-                .setPlaceholder('http://localhost:6789')
+                .setPlaceholder('https://english-v2.vercel.app')
                 .setValue(this.plugin.settings.vercelBackendUrl)
                 .onChange(async (value) => {
                     this.plugin.settings.vercelBackendUrl = value.replace(/\/$/, ''); // Remove trailing slash
                     await this.plugin.saveSettings();
+                    
+                    // 🔥 RELOAD SERVICES - Update AudioService with new URL
+                    if (this.plugin.dictionaryView) {
+                        this.plugin.dictionaryView.reloadServices();
+                        new Notice('✅ Backend URL updated! Services reloaded.');
+                    }
                 }));
 
         // AnkiConnect URL
@@ -1382,6 +1400,15 @@ class DictionaryView {
         
         this.render();
     }
+    
+    /**
+     * 🔥 Method to reload services when settings change
+     */
+    reloadServices() {
+        this.aiService = new AIService(this.plugin.settings.groqApiKey, this.plugin.settings.groqModel);
+        this.audioService = new AudioService(this.plugin.settings.vercelBackendUrl);
+        this.ankiService = new AnkiService(this.plugin.settings.ankiConnectUrl);
+    }
 
     render() {
         this.containerEl.empty();
@@ -2448,9 +2475,15 @@ class EnglishDictionaryProView extends ItemView {
         container.empty();
         
         this.dictionaryView = new DictionaryView(container, this.plugin);
+        
+        // 🔥 Store reference in plugin for settings access
+        this.plugin.dictionaryView = this.dictionaryView;
     }
 
     async onClose() {
         // Cleanup
+        if (this.plugin.dictionaryView === this.dictionaryView) {
+            this.plugin.dictionaryView = null;
+        }
     }
 }
