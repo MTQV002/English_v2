@@ -1,157 +1,52 @@
 /* ===================================================================
-   ENGLISH DICTIONARY PRO V3 - MODERN ADAPTIVE THEME
-   Perfect adaptation for both Light & Dark modes with Obsidian
-   All original components preserved + enhanced
+   ENGLISH DICTIONARY PRO V2 - CUSTOM INDEPENDENT THEME
+   Fixed color scheme for both light and dark modes
    =================================================================== */
 
-/* ==================== ADAPTIVE COLOR SYSTEM ====================
-   Uses Obsidian native variables for automatic theme switching
-   =================================================================== */
-
-.theme-light {
-    /* Light Mode - Soft, welcoming colors */
-    --dict-bg-primary: var(--background-primary);
-    --dict-bg-secondary: var(--background-secondary);
-    --dict-bg-tertiary: #f8fafc;
-    --dict-bg-card: rgba(255, 255, 255, 0.98);
-    --dict-bg-hover: rgba(248, 250, 252, 0.95);
-    --dict-bg-modal: rgba(255, 255, 255, 0.98);
-    
-    --dict-text-primary: var(--text-normal);
-    --dict-text-secondary: #64748b;
-    --dict-text-muted: #94a3b8;
-    --dict-text-accent: #0f172a;
-    --dict-text-inverse: #ffffff;
-    
-    --dict-accent: #3b82f6;
-    --dict-accent-hover: #2563eb;
-    --dict-accent-light: rgba(59, 130, 246, 0.1);
-    --dict-accent-glow: rgba(59, 130, 246, 0.15);
-    
-    --dict-success: #10b981;
-    --dict-success-light: rgba(16, 185, 129, 0.1);
-    --dict-warning: #f59e0b;
-    --dict-warning-light: rgba(245, 158, 11, 0.1);
-    --dict-error: #ef4444;
-    --dict-error-light: rgba(239, 68, 68, 0.1);
-    
-    --dict-border: rgba(226, 232, 240, 0.8);
-    --dict-border-strong: #cbd5e1;
-    --dict-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-    --dict-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --dict-shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
-    --dict-shadow-glow: 0 0 20px rgba(59, 130, 246, 0.15);
-    
-    --dict-hover: rgba(59, 130, 246, 0.08);
-}
-
-.theme-dark {
-    /* Dark Mode - Deep, focused colors */
-    --dict-bg-primary: var(--background-primary);
-    --dict-bg-secondary: var(--background-secondary);
-    --dict-bg-tertiary: #1e293b;
-    --dict-bg-card: rgba(30, 41, 59, 0.95);
-    --dict-bg-hover: rgba(51, 65, 85, 0.8);
-    --dict-bg-modal: rgba(30, 41, 59, 0.98);
-    
-    --dict-text-primary: var(--text-normal);
-    --dict-text-secondary: #cbd5e1;
-    --dict-text-muted: #64748b;
-    --dict-text-accent: #e2e8f0;
-    --dict-text-inverse: #0f172a;
-    
-    --dict-accent: #60a5fa;
-    --dict-accent-hover: #3b82f6;
-    --dict-accent-light: rgba(96, 165, 250, 0.15);
-    --dict-accent-glow: rgba(96, 165, 250, 0.25);
-    
-    --dict-success: #34d399;
-    --dict-success-light: rgba(52, 211, 153, 0.15);
-    --dict-warning: #fbbf24;
-    --dict-warning-light: rgba(251, 191, 36, 0.15);
-    --dict-error: #f87171;
-    --dict-error-light: rgba(248, 113, 113, 0.15);
-    
-    --dict-border: rgba(71, 85, 105, 0.5);
-    --dict-border-strong: #475569;
-    --dict-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-    --dict-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-    --dict-shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
-    --dict-shadow-glow: 0 0 30px rgba(96, 165, 250, 0.2);
-    
-    --dict-hover: rgba(96, 165, 250, 0.12);
-}
-
-/* Fallback for when theme classes don't exist */
 :root {
-    /* Default (dark-leaning) */
+    /* Custom theme colors - independent of Obsidian theme */
     --dict-bg-primary: #1a1d2e;
     --dict-bg-secondary: #252839;
     --dict-bg-tertiary: #2d3148;
-    --dict-bg-card: rgba(45, 49, 72, 0.95);
-    --dict-bg-hover: rgba(61, 66, 89, 0.8);
-    --dict-bg-modal: rgba(37, 40, 57, 0.98);
-    
     --dict-text-primary: #e2e4e9;
     --dict-text-secondary: #a8abbe;
     --dict-text-muted: #6b7280;
-    --dict-text-accent: #e2e8f0;
-    --dict-text-inverse: #0f172a;
-    
     --dict-accent: #3b82f6;
     --dict-accent-hover: #1d4ed8;
-    --dict-accent-light: rgba(59, 130, 246, 0.15);
-    --dict-accent-glow: rgba(59, 130, 246, 0.2);
-    
     --dict-success: #10b981;
-    --dict-success-light: rgba(16, 185, 129, 0.15);
-    --dict-warning: #f59e0b;
-    --dict-warning-light: rgba(245, 158, 11, 0.15);
     --dict-error: #ef4444;
-    --dict-error-light: rgba(239, 68, 68, 0.15);
-    
+    --dict-warning: #f59e0b;
     --dict-border: #374151;
-    --dict-border-strong: #475569;
-    --dict-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
-    --dict-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-    --dict-shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.4);
-    --dict-shadow-glow: 0 0 20px rgba(59, 130, 246, 0.15);
-    
     --dict-hover: #3d4259;
 }
 
-
-/* ==================== ENHANCED TYPOGRAPHY ====================
-   Modern, readable, accessible typography system
-   =================================================================== */
+/* IMPROVED TYPOGRAPHY - Better readability */
 .dictionary-entry,
 .dictionary-entry * {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'SF Pro', 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
-    line-height: 1.75 !important;
-    letter-spacing: 0.015em !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
+    line-height: 1.7 !important;
+    letter-spacing: 0.01em !important;
 }
 
 .dictionary-entry p,
 .definition-section p,
 .vietnamese-section p,
 .example-item {
-    font-size: 1.0625rem !important; /* 17px */
+    font-size: 1.05rem !important;
     line-height: 1.8 !important;
     font-weight: 400 !important;
     word-spacing: 0.05em !important;
 }
 
 .dictionary-entry h4 {
-    font-size: 1.1875rem !important; /* 19px */
+    font-size: 1.15rem !important;
     font-weight: 700 !important;
-    letter-spacing: 0.025em !important;
-    margin-bottom: 14px !important;
-    margin-top: 24px !important;
+    letter-spacing: 0.02em !important;
+    margin-bottom: 12px !important;
+    margin-top: 20px !important;
 }
 
-/* ==================== ADAPTIVE TEXT COLORS ====================
-   Automatically switches based on theme
-   =================================================================== */
+/* FORCE BLACK TEXT FOR ALL CONTENT - HIGHEST PRIORITY */
 .dictionary-entry,
 .dictionary-entry *,
 .definition-section,
@@ -170,7 +65,7 @@
 .nuance,
 .personal-note,
 .usage-notes {
-    color: var(--dict-text-primary) !important;
+    color: #0f172a !important;
 }
 
 .definition-section h4,
@@ -183,58 +78,44 @@
 .phrasal-verbs h4,
 .nuance h4,
 .personal-note h4 {
-    color: var(--dict-accent) !important;
-    font-weight: 700 !important;
+    color: #3b6cb7 !important;
 }
 
 /* === ORIGINAL MASCULINE TECH UI === */
 
-/* ==================== MODERN DICTIONARY HEADER ====================
-   Adaptive header with smooth gradient and glassmorphism
-   =================================================================== */
+/* Modern Dictionary Header */
 .dictionary-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 28px;
-    padding: 24px 28px;
-    background: var(--dict-bg-card);
-    border-radius: 20px;
-    color: var(--dict-text-primary);
-    box-shadow: var(--dict-shadow-lg);
-    border: 1px solid var(--dict-border);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.dictionary-header:hover {
-    box-shadow: var(--dict-shadow-glow);
-    transform: translateY(-2px);
+    margin-bottom: 24px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-radius: 16px;
+    color: white;
+    box-shadow: 0 8px 32px rgba(30, 41, 59, 0.3);
 }
 
 .header-main h2 {
     margin: 0;
-    font-size: 1.875em;
+    font-size: 1.8em;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--dict-accent) 0%, var(--dict-accent-hover) 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: -0.02em;
 }
 
 .header-tagline {
-    font-size: 0.9375em;
-    color: var(--dict-text-secondary);
-    margin-top: 6px;
+    font-size: 0.9em;
+    color: #94a3b8;
+    margin-top: 4px;
     font-weight: 500;
-    opacity: 0.9;
 }
 
 .header-stats {
     display: flex;
-    gap: 24px;
+    gap: 20px;
 }
 
 .stat-item {
@@ -242,97 +123,75 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 8px 12px;
-    background: var(--dict-accent-light);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-.stat-item:hover {
-    background: var(--dict-hover);
-    transform: scale(1.05);
 }
 
 .stat-icon {
     font-size: 1.5em;
     margin-bottom: 4px;
-    color: var(--dict-accent);
 }
 
 .stat-label {
-    font-size: 0.8125em;
-    color: var(--dict-text-secondary);
-    font-weight: 600;
+    font-size: 0.75em;
+    color: #cbd5e1;
+    font-weight: 500;
 }
 
-/* ==================== ENHANCED SEARCH CONTAINER ====================
-   Modern search with adaptive styling and smooth interactions
-   =================================================================== */
+/* Enhanced Search Container */
 .search-container {
     display: flex;
-    gap: 14px;
+    gap: 12px;
     align-items: center;
-    margin-bottom: 24px;
-    padding: 18px 20px;
-    background: var(--dict-bg-secondary);
-    border-radius: 16px;
-    box-shadow: var(--dict-shadow-md);
-    border: 1px solid var(--dict-border);
-    transition: all 0.3s ease;
-}
-
-.search-container:hover {
-    box-shadow: var(--dict-shadow-lg);
+    margin-bottom: 20px;
+    padding: 16px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .lookup-term-input {
     flex: 1;
-    padding: 16px 20px;
-    border: 2px solid var(--dict-border);
-    border-radius: 14px;
-    font-size: 1.125em;
+    padding: 14px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1.1em;
     font-weight: 500;
-    background: var(--dict-bg-primary) !important;
+    background: #ffffff !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--dict-text-primary) !important;
-    box-shadow: var(--dict-shadow-sm);
+    color: #1e293b !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .lookup-term-input::placeholder {
-    color: var(--dict-text-muted) !important;
+    color: #94a3b8 !important;
     font-weight: 400 !important;
-    opacity: 0.7;
 }
 
 .lookup-term-input:focus {
     outline: none;
-    border-color: var(--dict-accent);
-    box-shadow: 0 0 0 4px var(--dict-accent-light), var(--dict-shadow-md);
-    transform: translateY(-2px);
-    background: var(--dict-bg-primary) !important;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12), 0 6px 16px rgba(99, 102, 241, 0.2);
+    transform: translateY(-1px);
+    background: #ffffff !important;
 }
 
-/* ==================== MODERN LOOKUP BUTTON ====================
-   Adaptive gradient button with smooth animations
-   =================================================================== */
 .lookup-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 16px 28px;
-    background: linear-gradient(135deg, var(--dict-accent) 0%, var(--dict-accent-hover) 100%);
-    color: var(--dict-text-inverse);
+    gap: 8px;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
     border: none;
-    border-radius: 14px;
+    border-radius: 12px;
     font-weight: 700;
-    font-size: 1.0625rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--dict-shadow-md);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4), 0 2px 8px rgba(6, 182, 212, 0.2);
     position: relative;
     overflow: hidden;
-    min-width: 140px;
+    min-width: 120px;
 }
 
 .lookup-btn::before {
@@ -342,47 +201,38 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
     transition: left 0.6s ease;
 }
 
 .lookup-btn:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: var(--dict-shadow-glow);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 28px rgba(59, 130, 246, 0.5), 0 0 30px rgba(59, 130, 246, 0.2);
+    background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
 }
 
 .lookup-btn:hover::before {
     left: 100%;
 }
 
-.lookup-btn:active {
-    transform: translateY(-1px) scale(0.98);
-}
-
 .btn-icon {
-    font-size: 1.15em;
+    font-size: 1.1em;
 }
 
 .btn-text {
     font-size: 1em;
-    letter-spacing: 0.02em;
 }
 
-/* ==================== ENHANCED LOADING STATES ====================
-   Modern loading indicators with adaptive theme
-   =================================================================== */
+/* Enhanced Loading States */
 .lookup-loading {
     text-align: center;
-    padding: 48px 28px;
-    background: var(--dict-bg-card);
-    border-radius: 20px;
-    border: 1px solid var(--dict-border);
-    color: var(--dict-text-primary);
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-radius: 16px;
+    border: 1px solid #334155;
+    color: white;
     position: relative;
     overflow: hidden;
-    box-shadow: var(--dict-shadow-lg);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
 }
 
 .lookup-loading::before {
@@ -392,16 +242,16 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, var(--dict-accent-glow), transparent);
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
     animation: shimmer 2s infinite;
 }
 
 .loading-text {
-    font-size: 1.25em;
+    font-size: 1.2em;
     font-weight: 600;
-    color: var(--dict-text-primary);
-    margin: 20px 0;
-    text-shadow: var(--dict-shadow-sm);
+    color: #f1f5f9;
+    margin: 16px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes shimmer {
@@ -410,236 +260,179 @@
 }
 
 .tech-loading {
-    margin: 24px 0;
+    margin: 20px 0;
 }
 
 .loading-steps {
     display: flex;
     justify-content: center;
-    gap: 24px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 16px;
 }
 
 .step {
-    padding: 10px 16px;
-    border-radius: 10px;
-    background: var(--dict-bg-secondary);
-    color: var(--dict-text-muted);
-    font-size: 0.9375em;
-    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #6b7280;
+    font-size: 0.9em;
+    font-weight: 500;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
 }
 
 .step.active {
-    background: var(--dict-accent);
-    color: var(--dict-text-inverse);
-    transform: scale(1.08);
-    box-shadow: var(--dict-shadow-glow);
-    border-color: var(--dict-accent-hover);
+    background: #3b82f6;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 .loading-progress {
-    margin-top: 20px;
-    height: 6px;
-    background: var(--dict-bg-tertiary);
-    border-radius: 3px;
+    margin-top: 16px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
     overflow: hidden;
 }
 
 .progress-bar {
     height: 100%;
     width: 60%;
-    background: linear-gradient(90deg, var(--dict-accent), var(--dict-accent-hover));
-    border-radius: 3px;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    border-radius: 2px;
     animation: progressSlide 2s ease-in-out infinite;
-    box-shadow: 0 0 10px var(--dict-accent-glow);
 }
 
-/* ==================== ENHANCED ERROR STATES ====================
-   Modern error displays with adaptive colors
-   =================================================================== */
+/* Enhanced Error States */
 .lookup-error {
     text-align: center;
-    padding: 40px 28px;
-    background: var(--dict-error-light);
-    border-radius: 16px;
-    border-left: 4px solid var(--dict-error);
-    box-shadow: var(--dict-shadow-md);
+    padding: 32px 24px;
+    background: linear-gradient(135deg, #fef2f2 0%, #fef7f7 100%);
+    border-radius: 12px;
+    border-left: 4px solid #ef4444;
 }
 
 .error-icon {
-    font-size: 56px;
-    margin-bottom: 20px;
-    color: var(--dict-error);
-    animation: pulse 2s ease-in-out infinite;
+    font-size: 48px;
+    margin-bottom: 16px;
 }
 
 .error-message h3 {
-    font-size: 1.375em;
+    font-size: 1.3em;
     font-weight: 700;
-    color: var(--dict-error);
-    margin: 0 0 10px 0;
-    letter-spacing: -0.01em;
+    color: #dc2626;
+    margin: 0 0 8px 0;
 }
 
 .error-message p {
-    color: var(--dict-text-secondary);
-    margin: 0 0 24px 0;
+    color: #7f1d1d;
+    margin: 0 0 20px 0;
     font-weight: 500;
-    line-height: 1.6;
 }
 
 .retry-btn {
-    background: linear-gradient(135deg, var(--dict-accent) 0%, var(--dict-accent-hover) 100%);
-    color: var(--dict-text-inverse);
+    background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);
+    color: white;
     border: none;
-    padding: 14px 28px;
-    border-radius: 10px;
-    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 20px;
-    box-shadow: var(--dict-shadow-md);
+    margin-top: 16px;
 }
 
 .retry-btn:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: var(--dict-shadow-glow);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
 }
 
-/* ==================== MODERN ACTION BUTTONS ====================
-   Adaptive button system with smooth interactions
-   =================================================================== */
+/* Button Improvements - Blue Gradient Theme */
 .save-btn, .anki-btn {
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     text-transform: none !important;
-    letter-spacing: 0.02em !important;
-    padding: 14px 28px !important;
-    border-radius: 12px !important;
+    letter-spacing: 0.5px !important;
+    padding: 12px 24px !important;
+    border-radius: 10px !important;
     border: none !important;
     cursor: pointer !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    font-size: 1.0625em !important;
+    transition: all 0.3s ease !important;
+    font-size: 1em !important;
     display: inline-flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    box-shadow: var(--dict-shadow-md) !important;
-    position: relative !important;
-    overflow: hidden !important;
+    gap: 8px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
 }
 
 .save-btn {
-    background: linear-gradient(135deg, var(--dict-accent) 0%, var(--dict-accent-hover) 100%) !important;
-    color: var(--dict-text-inverse) !important;
+    background: linear-gradient(90deg, #4f8cff 0%, #3b6cb7 100%) !important;
+    color: white !important;
 }
 
 .save-btn:hover {
-    transform: translateY(-2px) scale(1.02) !important;
-    box-shadow: var(--dict-shadow-glow) !important;
+    background: linear-gradient(90deg, #3b6cb7 0%, #4f8cff 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(79, 140, 255, 0.4) !important;
 }
 
 .anki-btn {
-    background: linear-gradient(135deg, var(--dict-success) 0%, var(--dict-accent) 100%) !important;
-    color: var(--dict-text-inverse) !important;
+    background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%) !important;
+    color: white !important;
 }
 
 .anki-btn:hover {
-    transform: translateY(-2px) scale(1.02) !important;
-    box-shadow: 0 8px 24px var(--dict-success-light) !important;
+    background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4) !important;
 }
 
-.save-btn:active,
-.anki-btn:active {
-    transform: translateY(0) scale(0.98) !important;
-}
-
-/* ==================== SMOOTH ANIMATIONS ====================
-   Modern keyframe animations for better UX
-   =================================================================== */
+/* Animations */
 @keyframes pulse {
-    0%, 100% { 
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% { 
-        transform: scale(1.05);
-        opacity: 0.8;
-    }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 @keyframes progressSlide {
-    0% { 
-        transform: translateX(-100%);
-        opacity: 0.6;
-    }
-    50% { 
-        transform: translateX(0%);
-        opacity: 1;
-    }
-    100% { 
-        transform: translateX(100%);
-        opacity: 0.6;
-    }
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(0%); }
+    100% { transform: translateX(100%); }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ==================== ADAPTIVE MAIN CONTAINER ====================
-   Modern, responsive layout with theme support
-   =================================================================== */
+/* Modern, inspiring English learning UI */
 .llm-dictionary-view {
-    padding: 24px 16px;
+    padding: 20px 12px 20px 12px;
     height: 100%;
     overflow: hidden;
-    background: var(--dict-bg-primary);
-    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro', 'Segoe UI', Arial, sans-serif;
-    transition: background 0.3s ease;
+    /* Pure white background - NO gradients */
+    background: #fafbfc;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
 }
 
 .dictionary-view-content {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
 }
 
-/* ==================== PREMIUM DICTIONARY ENTRY CARD ====================
-   Glassmorphism design with adaptive colors
-   =================================================================== */
 .dictionary-entry {
-    background: var(--dict-bg-card);
+    /* Premium glass morphism với subtle gradient */
+    background: 
+        linear-gradient(135deg, 
+            rgba(255, 255, 255, 0.95) 0%, 
+            rgba(255, 255, 255, 0.9) 100%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     backdrop-filter: blur(20px) saturate(180%);
-    border-radius: 24px;
-    box-shadow: var(--dict-shadow-lg);
+    border-radius: 20px;
+    box-shadow: 
+        0 8px 32px rgba(59, 130, 246, 0.08),
+        0 4px 16px rgba(168, 85, 247, 0.06),
+        0 0 0 1px rgba(255, 255, 255, 0.8) inset;
     padding: 0 !important;
-    margin: 0 auto 28px auto;
-    max-width: 800px;
+    margin: 0 auto 24px auto;
+    max-width: 750px;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    border: 1px solid var(--dict-border);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     position: relative;
     animation: floatIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     overflow: visible;
@@ -660,17 +453,19 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
+    height: 4px;
     background: linear-gradient(
         90deg, 
-        var(--dict-accent) 0%, 
-        var(--dict-accent-hover) 50%,
-        var(--dict-accent) 100%
+        #3b82f6 0%, 
+        #06b6d4 25%, 
+        #06b6d4 50%,
+        #06b6d4 75%,
+        #3b82f6 100%
     );
     background-size: 200% 100%;
     animation: shimmerFlow 3s ease-in-out infinite;
-    border-radius: 24px 24px 0 0;
-    box-shadow: 0 2px 12px var(--dict-accent-glow);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 2px 12px rgba(59, 130, 246, 0.4);
 }
 
 @keyframes shimmerFlow {
@@ -679,15 +474,19 @@
 }
 
 .dictionary-entry:hover {
-    transform: translateY(-4px) scale(1.008);
-    box-shadow: var(--dict-shadow-glow);
-    border-color: var(--dict-accent);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 
+        0 20px 60px rgba(59, 130, 246, 0.15),
+        0 12px 32px rgba(168, 85, 247, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.9) inset,
+        0 0 40px rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
 }
 
 @keyframes floatIn {
     0% {
         opacity: 0;
-        transform: translateY(30px) scale(0.96);
+        transform: translateY(30px) scale(0.95);
     }
     100% {
         opacity: 1;
@@ -695,53 +494,56 @@
     }
 }
 
-/* ==================== WORD HEADER SECTION ====================
-   Premium word display with adaptive colors
-   =================================================================== */
 .word-header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 12px;
     margin: 0 !important;
-    padding: 32px 36px 28px 36px !important;
-    background: var(--dict-bg-secondary);
-    border-bottom: 2px solid var(--dict-border);
+    padding: 28px 32px 24px 32px !important;
+    background: linear-gradient(135deg, 
+        rgba(59, 130, 246, 0.03) 0%, 
+        rgba(168, 85, 247, 0.02) 100%);
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, 
+        rgba(59, 130, 246, 0.3), 
+        rgba(168, 85, 247, 0.3)) 1;
     position: relative;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border-radius: 24px 24px 0 0;
+    background: #ffffff;
 }
 
 .word-header::after {
     content: '';
     position: absolute;
-    bottom: -2px;
-    left: 32px;
-    width: 70px;
-    height: 3px;
-    background: var(--dict-accent);
+    bottom: -1px;
+    left: 28px;
+    width: 60px;
+    height: 2px;
+    background: #3b82f6;
     border-radius: 2px;
-    box-shadow: 0 0 10px var(--dict-accent-glow);
 }
 
 .word-term {
-    font-size: 2.625rem;
+    font-size: 2.5rem;
     font-weight: 900;
     background: linear-gradient(
         135deg, 
-        var(--dict-accent) 0%, 
-        var(--dict-accent-hover) 100%
+        #1e40af 0%, 
+        #3b82f6 30%,
+        #06b6d4 60%,
+        #06b6d4 100%
     );
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.01em;
     margin: 0;
     animation: gradientShift 8s ease infinite, fadeIn 0.4s ease-out;
-    text-shadow: var(--dict-shadow-sm);
-    filter: drop-shadow(0 2px 8px var(--dict-accent-glow));
+    text-shadow: 0 2px 20px rgba(59, 130, 246, 0.2);
+    filter: drop-shadow(0 2px 8px rgba(59, 130, 246, 0.15));
 }
 
 @keyframes gradientShift {
@@ -749,16 +551,29 @@
     50% { background-position: 100% 50%; }
 }
 
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(-8px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
 .word-type {
-    font-size: 0.9375rem;
-    color: var(--dict-text-inverse) !important;
-    background: linear-gradient(135deg, var(--dict-accent) 0%, var(--dict-accent-hover) 100%);
-    padding: 8px 16px;
-    border-radius: 10px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
+    font-size: 0.9rem;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
-    box-shadow: var(--dict-shadow-md);
+    box-shadow: 
+        0 2px 8px rgba(59, 130, 246, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.2) inset;
     animation: fadeIn 0.5s ease-out 0.1s both;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -769,44 +584,42 @@
     justify-content: center;
     line-height: 1;
     flex-shrink: 0;
-    border: 1px solid var(--dict-border);
 }
 
 .word-type:hover {
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: var(--dict-shadow-glow);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 4px 16px rgba(59, 130, 246, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.3) inset;
 }
 
 .pronunciation {
     display: flex;
     align-items: center;
-    gap: 18px;
-    margin-bottom: 14px;
+    gap: 16px;
+    margin-bottom: 12px;
 }
 
 .ipa {
-    font-size: 1.25rem;
-    color: var(--dict-accent) !important;
-    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-    background: var(--dict-accent-light);
-    border: 1px solid var(--dict-border);
-    border-radius: 8px;
-    padding: 6px 14px;
-    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #0ea5e9 !important;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    background: rgba(14, 165, 233, 0.06);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    border-radius: 6px;
+    padding: 4px 12px;
+    margin-right: 8px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .ipa:hover {
     transform: translateY(-2px);
-    box-shadow: var(--dict-shadow-md);
-    border-color: var(--dict-accent);
-    background: var(--dict-hover);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);
+    border-color: rgba(14, 165, 233, 0.5);
 }
 
-/* ==================== MODERN SECTION HEADERS ====================
-   Consistent header styling with accent indicator
-   =================================================================== */
+/* Modern Section Headers */
 .definition-section h4,
 .vietnamese-section h4,
 .examples h4,
@@ -817,16 +630,16 @@
 .phrasal-verbs h4,
 .nuance h4,
 .personal-note h4 {
-    color: var(--dict-accent) !important;
-    font-size: 1.25rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    margin-top: 24px;
-    letter-spacing: 0.02em;
-    padding-left: 20px;
+    color: #3b6cb7;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    letter-spacing: 0.3px;
+    padding-left: 16px;
     position: relative;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .definition-section h4::before,
@@ -844,29 +657,31 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 5px;
-    height: 20px;
-    background: linear-gradient(180deg, var(--dict-accent) 0%, var(--dict-accent-hover) 100%);
-    border-radius: 3px;
-    box-shadow: 0 0 10px var(--dict-accent-glow);
+    width: 4px;
+    height: 16px;
+    background: linear-gradient(135deg, #4f8cff 0%, #3b6cb7 100%);
+    border-radius: 2px;
 }
 
-/* ==================== CONTENT SECTIONS ====================
-   Definition and Vietnamese sections with glassmorphism
-   =================================================================== */
+/* Modern Content Styling */
 .definition-section,
 .vietnamese-section {
-    background: var(--dict-bg-card);
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.9) 0%, 
+        rgba(255, 255, 255, 0.85) 100%);
     -webkit-backdrop-filter: blur(12px) saturate(150%);
     backdrop-filter: blur(12px) saturate(150%);
-    border-radius: 18px;
-    padding: 28px 32px;
-    margin: 0 28px 20px 28px;
-    border-left: 4px solid var(--dict-accent);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 0 24px 16px 24px;
+    border-left: 4px solid transparent;
+    border-image: linear-gradient(180deg, 
+        #3b82f6 0%, 
+        #06b6d4 100%) 1;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--dict-shadow-md);
-    border: 1px solid var(--dict-border);
-    border-left: 4px solid var(--dict-accent);
+    box-shadow: 
+        0 4px 12px rgba(59, 130, 246, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
     position: relative;
     overflow: hidden;
 }
@@ -877,11 +692,11 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     background: radial-gradient(
         circle at center,
-        var(--dict-accent-glow) 0%,
+        rgba(59, 130, 246, 0.08) 0%,
         transparent 70%
     );
     pointer-events: none;
@@ -889,17 +704,20 @@
 
 .definition-section:hover,
 .vietnamese-section:hover {
-    transform: translateX(6px);
-    box-shadow: var(--dict-shadow-lg);
-    border-left-color: var(--dict-accent-hover);
+    transform: translateX(4px);
+    box-shadow: 
+        0 8px 24px rgba(59, 130, 246, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.6) inset,
+        -4px 0 20px rgba(59, 130, 246, 0.15);
+    border-left-color: #2563eb;
 }
 
 .definition-section p,
 .vietnamese-section p {
-    font-size: 1.0625rem;
-    color: var(--dict-text-primary) !important;
+    font-size: 1.05rem;
+    color: #1e293b !important;
     margin: 0;
-    line-height: 1.75;
+    line-height: 1.65;
     font-weight: 400;
 }
 
@@ -908,12 +726,10 @@
 .examples,
 .example-list,
 .example-item {
-    color: var(--dict-text-primary) !important;
+    color: #1e293b !important;
 }
 
-/* ==================== EXAMPLES & OTHER SECTIONS ====================
-   Consistent styling for all content sections
-   =================================================================== */
+/* Modern Examples Section */
 .examples,
 .synonyms,
 .antonyms,
@@ -923,17 +739,22 @@
 .usage-notes,
 .common-mistakes,
 .personal-note {
-    padding: 24px 32px;
-    margin: 0 28px 20px 28px;
-    background: var(--dict-bg-card);
+    padding: 20px 28px;
+    margin: 0 24px 16px 24px;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.88) 0%, 
+        rgba(255, 255, 255, 0.82) 100%);
     -webkit-backdrop-filter: blur(12px) saturate(150%);
     backdrop-filter: blur(12px) saturate(150%);
-    border-radius: 18px;
-    border-left: 4px solid var(--dict-success);
+    border-radius: 16px;
+    border-left: 4px solid transparent;
+    border-image: linear-gradient(180deg, 
+        #10b981 0%, 
+        #06b6d4 100%) 1;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--dict-shadow-md);
-    border: 1px solid var(--dict-border);
-    border-left: 4px solid var(--dict-success);
+    box-shadow: 
+        0 4px 12px rgba(16, 185, 129, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
     position: relative;
     overflow: hidden;
 }
@@ -951,11 +772,11 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     background: radial-gradient(
         circle at center,
-        var(--dict-success-light) 0%,
+        rgba(16, 185, 129, 0.08) 0%,
         transparent 70%
     );
     pointer-events: none;
@@ -970,28 +791,35 @@
 .usage-notes:hover,
 .common-mistakes:hover,
 .personal-note:hover {
-    transform: translateX(6px);
-    box-shadow: var(--dict-shadow-lg);
+    transform: translateX(4px);
+    box-shadow: 
+        0 8px 24px rgba(16, 185, 129, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.6) inset,
+        -4px 0 20px rgba(16, 185, 129, 0.15);
 }
 
 .example-list {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-top: 14px;
+    gap: 12px;
+    margin-top: 12px;
 }
 
 .example-item {
-    background: var(--dict-bg-secondary);
-    border: 1px solid var(--dict-border);
-    border-radius: 14px;
-    padding: 16px 20px 16px 50px;
-    font-size: 1.0625rem;
-    color: var(--dict-text-primary) !important;
-    line-height: 1.75;
+    background: linear-gradient(135deg, 
+        rgba(249, 250, 251, 0.95) 0%,
+        rgba(240, 253, 250, 0.9) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.15);
+    border-radius: 12px;
+    padding: 14px 18px 14px 44px;
+    font-size: 1rem;
+    color: #1e293b !important;
+    line-height: 1.7;
     position: relative;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--dict-shadow-sm);
+    box-shadow: 
+        0 2px 6px rgba(16, 185, 129, 0.04),
+        0 0 0 1px rgba(255, 255, 255, 0.6) inset;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
 }
@@ -999,53 +827,55 @@
 .example-item::before {
     content: '💬';
     position: absolute;
-    left: 16px;
-    top: 18px;
-    font-size: 20px;
-    filter: drop-shadow(0 2px 4px var(--dict-success-light));
+    left: 14px;
+    top: 16px;
+    font-size: 18px;
+    filter: drop-shadow(0 2px 4px rgba(16, 185, 129, 0.3));
 }
 
 .example-item:hover {
-    transform: translateX(8px);
-    background: var(--dict-hover);
-    border-color: var(--dict-success);
-    box-shadow: var(--dict-shadow-md);
+    transform: translateX(6px);
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(240, 253, 250, 0.95) 100%);
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 
+        0 6px 16px rgba(16, 185, 129, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.8) inset,
+        -4px 0 12px rgba(16, 185, 129, 0.08);
 }
 
-/* ==================== MODERN AUDIO BUTTONS ====================
-   Cambridge audio player with adaptive styling
-   =================================================================== */
+/* Modern Cambridge Audio Buttons */
 .audio-btn-group {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .audio-btn {
-    background: linear-gradient(135deg, var(--dict-accent) 0%, var(--dict-accent-hover) 100%);
-    color: var(--dict-text-inverse);
+    background: linear-gradient(135deg, #4f8cff 0%, #3b6cb7 100%);
+    color: white;
     border: none;
-    border-radius: 10px;
-    padding: 10px 18px;
+    border-radius: 8px;
+    padding: 8px 16px;
     cursor: pointer;
-    font-size: 0.9375rem;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 600;
     margin: 0 4px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
-    box-shadow: var(--dict-shadow-md);
+    box-shadow: 0 4px 12px rgba(79, 140, 255, 0.3);
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     position: relative;
     overflow: hidden;
     animation: audioPulse 2s ease-in-out infinite;
-    border: 1px solid var(--dict-border);
 }
 
 @keyframes audioPulse {
-    0%, 100% { box-shadow: var(--dict-shadow-md); }
-    50% { box-shadow: var(--dict-shadow-glow); }
+    0%, 100% { box-shadow: 0 4px 12px rgba(79, 140, 255, 0.3); }
+    50% { box-shadow: 0 4px 20px rgba(79, 140, 255, 0.5), 0 0 15px rgba(79, 140, 255, 0.3); }
 }
 
 .audio-btn::before {
@@ -1060,8 +890,9 @@
 }
 
 .audio-btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: var(--dict-shadow-glow);
+    background: linear-gradient(135deg, #3b6cb7 0%, #4f8cff 100%);
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 8px 24px rgba(79, 140, 255, 0.5), 0 0 20px rgba(79, 140, 255, 0.3);
     animation: none;
 }
 
@@ -1853,56 +1684,51 @@
     border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* ==================== CHATBOT INTERFACE ====================
-   Modern AI chat interface with adaptive theme
-   =================================================================== */
+/* Chatbot Interface */
 .chatbot-container {
-    background: var(--dict-bg-card);
-    border-radius: 20px;
-    padding: 28px;
-    margin: 28px 0;
-    box-shadow: var(--dict-shadow-lg);
-    border: 1px solid var(--dict-border);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 24px 0;
+    box-shadow: 
+        0 8px 32px rgba(79, 140, 255, 0.12),
+        0 4px 16px rgba(59, 108, 183, 0.08);
+    border: 1px solid rgba(79, 140, 255, 0.15);
 }
 
 .chatbot-header {
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin-bottom: 24px;
-    padding-bottom: 18px;
-    border-bottom: 2px solid var(--dict-border);
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgba(79, 140, 255, 0.1);
 }
 
 .chatbot-header h3 {
-    font-size: 1.375em;
-    background: linear-gradient(135deg, var(--dict-accent) 0%, var(--dict-accent-hover) 100%);
+    font-size: 1.3em;
+    background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 800;
     margin: 0;
-    letter-spacing: -0.01em;
 }
 
 .chatbot-messages {
-    max-height: 450px;
+    max-height: 400px;
     overflow-y: auto;
-    padding: 20px;
-    background: var(--dict-bg-secondary);
-    border-radius: 16px;
-    margin-bottom: 20px;
-    border: 1px solid var(--dict-border);
+    padding: 16px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    margin-bottom: 16px;
 }
 
 .chat-message {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    animation: fadeIn 0.3s ease-out;
+    gap: 8px;
 }
 
 .chat-message.user {
@@ -1915,102 +1741,114 @@
 
 .message-bubble {
     max-width: 80%;
-    padding: 16px 20px;
-    border-radius: 18px;
-    line-height: 1.75;
-    font-size: 1rem;
-    box-shadow: var(--dict-shadow-md);
+    padding: 14px 18px;
+    border-radius: 16px;
+    line-height: 1.7;
+    font-size: 0.98em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    border: 1px solid var(--dict-border);
 }
 
 .chat-message.user .message-bubble {
-    background: var(--dict-accent);
+    /* Clean simple design like AI - no gradient overlay */
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(249, 250, 251, 0.95) 100%);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    color: var(--dict-text-inverse);
+    color: #1e293b;
+    border: 1px solid rgba(59, 130, 246, 0.2);
     border-bottom-right-radius: 6px;
+    box-shadow: 
+        0 4px 12px rgba(59, 130, 246, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
 }
 
 .chat-message.user .message-bubble:hover {
-    transform: translateX(-3px);
-    box-shadow: var(--dict-shadow-glow);
+    transform: translateX(-2px);
+    box-shadow: 
+        0 6px 16px rgba(59, 130, 246, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.6) inset;
 }
 
 .chat-message.ai .message-bubble {
-    background: var(--dict-bg-card);
+    /* Clean white design matching user messages */
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(249, 250, 251, 0.95) 100%);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    color: var(--dict-text-primary);
+    color: #1e293b;
+    border: 1px solid rgba(139, 92, 246, 0.2);
     border-bottom-left-radius: 6px;
+    box-shadow: 
+        0 4px 12px rgba(139, 92, 246, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
 }
 
 .chat-message.ai .message-bubble:hover {
-    transform: translateX(3px);
-    box-shadow: var(--dict-shadow-md);
+    transform: translateX(2px);
+    box-shadow: 
+        0 6px 16px rgba(139, 92, 246, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.6) inset;
 }
 
 .chatbot-input-container {
     display: flex;
-    gap: 14px;
+    gap: 12px;
 }
 
 .chatbot-input {
     flex: 1;
-    padding: 14px 18px;
-    border: 2px solid var(--dict-border);
-    border-radius: 12px;
-    font-size: 1.0625em;
-    background: var(--dict-bg-primary);
-    color: var(--dict-text-primary);
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1em;
+    background: white;
     transition: all 0.3s ease;
 }
 
 .chatbot-input:focus {
     outline: none;
-    border-color: var(--dict-accent);
-    box-shadow: 0 0 0 4px var(--dict-accent-light);
-    background: var(--dict-bg-primary);
+    border-color: #06b6d4;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
 }
 
 .chatbot-send-btn {
-    padding: 14px 28px;
-    background: linear-gradient(135deg, var(--dict-accent) 0%, var(--dict-accent-hover) 100%);
-    color: var(--dict-text-inverse);
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+    color: white;
     border: none;
-    border-radius: 12px;
-    font-weight: 700;
+    border-radius: 10px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: var(--dict-shadow-md);
+    box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);
 }
 
 .chatbot-send-btn:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
     transform: translateY(-2px);
-    box-shadow: var(--dict-shadow-glow);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
 }
 
-/* ==================== CHATBOT SCROLLBAR ====================
-   Custom scrollbar for chat messages
-   =================================================================== */
+/* Scrollbar for chatbot */
 .chatbot-messages::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 .chatbot-messages::-webkit-scrollbar-track {
-    background: var(--dict-bg-tertiary);
-    border-radius: 4px;
+    background: rgba(79, 140, 255, 0.05);
+    border-radius: 3px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb {
-.chatbot-messages::-webkit-scrollbar-thumb {
-    background: var(--dict-accent-light);
-    border-radius: 4px;
-    transition: background 0.3s ease;
+    background: rgba(79, 140, 255, 0.3);
+    border-radius: 3px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb:hover {
-    background: var(--dict-accent);
+    background: rgba(79, 140, 255, 0.5);
 }
 
 /* Responsive Design */
@@ -2273,69 +2111,66 @@
    FIXES - FORCE BLACK TEXT FOR ALL MODES
    =================================================================== */
 
-/* ==================== THEME-SPECIFIC ADJUSTMENTS ====================
-   Fine-tune specific components for optimal appearance in each theme
-   These use CSS variables defined at the top, no hard-coded colors
-   =================================================================== */
-
-/* Ensure proper contrast in modals */
+/* REMOVE ALL DARK MODE OVERRIDES - Force black text everywhere */
 .theme-dark .deck-selection-modal h2,
 .theme-dark .deck-selection-modal h3,
 .theme-dark .deck-selection-modal h4,
 .theme-dark .deck-selection-modal label,
 .theme-dark .deck-selector label,
-.theme-dark .note-type-selector label {
-    color: var(--dict-text-primary) !important;
-}
-
-/* Dictionary entry text uses adaptive colors */
+.theme-dark .note-type-selector label,
 .theme-dark .dictionary-entry h1,
 .theme-dark .dictionary-entry h4,
 .theme-dark .dictionary-entry p,
 .theme-dark .dictionary-entry .example-item,
-.theme-dark .dictionary-entry .mistake-item {
-    color: var(--dict-text-primary) !important;
+.theme-dark .dictionary-entry .mistake-item,
+.deck-selection-modal h2,
+.deck-selection-modal h3,
+.deck-selection-modal h4,
+.deck-selection-modal label,
+.deck-selector label,
+.note-type-selector label,
+.dictionary-entry h1,
+.dictionary-entry h4,
+.dictionary-entry p,
+.dictionary-entry .example-item,
+.dictionary-entry .mistake-item {
+    color: #0f172a !important;
 }
 
-/* Preview sections with adaptive colors */
 .theme-dark .preview-definition,
 .preview-definition {
-    color: var(--dict-text-secondary) !important;
+    color: #334155 !important;
 }
 
 .theme-dark .preview-vietnamese,
 .preview-vietnamese {
-    color: var(--dict-success) !important;
+    color: #059669 !important;
 }
 
-/* Special elements maintain their accent colors */
 .theme-dark .word-type,
 .word-type {
-    color: var(--dict-text-inverse) !important;
-    background: linear-gradient(135deg, var(--dict-accent) 0%, var(--dict-accent-hover) 100%);
+    color: #3b6cb7 !important;
 }
 
 .theme-dark .ipa,
 .ipa {
-    color: var(--dict-accent) !important;
+    color: #0ea5e9 !important;
 }
 
-/* Chatbot headers keep high contrast */
+/* Keep chatbot text white on colored backgrounds */
 .theme-dark .chatbot-fixed .chatbot-header h3,
 .chatbot-fixed .chatbot-header h3 {
-    color: var(--dict-text-inverse) !important;
+    color: white !important;
 }
 
-/* Chatbot user messages */
 .theme-dark .chatbot-fixed .chat-message.user,
 .chatbot-fixed .chat-message.user {
-    color: var(--dict-text-primary) !important;
+    color: white !important;
 }
 
-/* Action buttons maintain inverse text */
 .theme-dark .action-btn,
 .action-btn {
-    color: var(--dict-text-inverse) !important;
+    color: white !important;
 }
 
 /* Improved Deck Selection Modal Styling */
